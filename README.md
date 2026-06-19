@@ -1,18 +1,61 @@
+# Hi, I'm Myles Agnew 👋
 
-# 💻 Tech Stack:
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=for-the-badge&logo=digitalOcean&logoColor=white) ![GithubPages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Linode](https://img.shields.io/badge/linode-00A95C?style=for-the-badge&logo=linode&logoColor=white) ![OVH](https://img.shields.io/badge/ovh-%23123F6D.svg?style=for-the-badge&logo=ovh&logoColor=#123F6D) ![Vultr](https://img.shields.io/badge/Vultr-007BFC.svg?style=for-the-badge&logo=vultr) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) ![AmazonDynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![Bitwarden](https://img.shields.io/badge/bitwarden-%23175DDC.svg?style=for-the-badge&logo=bitwarden&logoColor=white) ![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![Cisco](https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black) ![Confluence](https://img.shields.io/badge/confluence-%23172BF4.svg?style=for-the-badge&logo=confluence&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![ElasticSearch](https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch) ![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white) ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi) ![Ubiquiti](https://img.shields.io/badge/ubiquiti-%230559C9.svg?style=for-the-badge&logo=ubiquiti&logoColor=white) ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) ![Splunk](https://img.shields.io/badge/splunk-%23000000.svg?style=for-the-badge&logo=splunk&logoColor=white) ![Pi-Hole](https://img.shields.io/badge/pihole-%2396060C.svg?style=for-the-badge&logo=pi-hole&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=mylesagnew&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=mylesagnew&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=mylesagnew&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+**Cyber Security Specialist | Cloud & Web Security | Infrastructure as Code**  
+*Australia | Securing systems one practical layer at a time*
 
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=mylesagnew&theme=radical&no-frame=false&no-bg=true&margin-w=4)
+I'm a cybersecurity practitioner with 18+ years in tech, focused on **practical risk reduction** in cloud-first environments, web hardening (especially WordPress), incident response readiness, and secure automation. Passionate about making security accessible, reproducible, and effective for teams and builders.
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+- 🌐 [mylesagnew.com](https://mylesagnew.com) — Blog, talks, and resources
+- 📧 Open to coffee chats on cloud security, IR playbooks, or hardening projects
+- 🐦 [@mylesagnew](https://twitter.com/mylesagnew) | [ORCID](https://orcid.org/0009-0004-2918-2466)
 
 ---
-[![](https://visitcount.itsvg.in/api?id=mylesagnew&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## 🛠️ Tech Stack & Expertise
+
+### Languages & Scripting
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white) 
+![Shell](https://img.shields.io/badge/Shell-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
+
+### Cloud & Infrastructure
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0072C6?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)
+**Terraform | Ansible | Docker | Kubernetes**
+
+### Security & Observability
+**Splunk | Velociraptor | Pi-hole | Bitwarden | Grafana | Prometheus**  
+WAF, IAM, threat modeling, DNS security, endpoint forensics.
+
+*(Full list on [my website](https://mylesagnew.com))*
+
+---
+
+## 🚀 Featured Projects
+
+- **[promptgenie](https://github.com/mylesagnew/promptgenie)** — Prompt linting, static risk scanning, testing & CI for AI-agent prompts (SARIF output, security-focused).
+- **[cloudflare-backup](https://github.com/mylesagnew/cloudflare-backup)** — Automated DNS record backups for version control and recovery.
+- **[github-backup](https://github.com/mylesagnew/github-backup)** — Comprehensive Bash tooling to snapshot & restore all your GitHub repos (including orgs).
+- **[poc_opencti](https://github.com/mylesagnew/poc_opencti)** — Ready-to-run Docker deployment for OpenCTI threat intelligence platform.
+- **[casaos-installation-deb13](https://github.com/mylesagnew/casaos-installation-deb13)** — Streamlined self-hosted home lab setup.
+
+*Many more automation, security, and self-hosted tools in my repos.*
+
+---
+
+## 📊 GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mylesagnew&theme=radical&hide_border=false&include_all_commits=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mylesagnew&theme=radical&layout=compact)
+
+## 🏆 Trophies
+![](https://github-profile-trophy.vercel.app/?username=mylesagnew&theme=radical&no-frame=false&margin-w=4)
+
+---
+
+## 🌟 Let's Connect
+- **Book a coffee chat**: Practical discussions on cloud security, WordPress hardening, or IR readiness → [mylesagnew.com](https://mylesagnew.com)
+- Always up for collaborating on security tooling, open-source improvements, or interesting self-hosted projects.
+
+*Coffee addict. Surfer. Dad. Still learning.*
