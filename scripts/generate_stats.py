@@ -22,6 +22,8 @@ import html
 import json
 import os
 import sys
+import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -39,8 +41,16 @@ def gql(token: str, query: str, variables: dict | None = None) -> dict:
             "User-Agent": "profile-stats-generator",
         },
     )
-    with urllib.request.urlopen(req, timeout=30) as resp:  # noqa: S310 (fixed https URL)
-        payload = json.load(resp)
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:  # noqa: S310 (fixed https URL)
+                payload = json.load(resp)
+            break
+        except urllib.error.HTTPError as exc:
+            # GitHub returns 502/503/504 when an expensive query times out.
+            if exc.code not in (502, 503, 504) or attempt == 3:
+                raise
+            time.sleep(2 * (attempt + 1))
     if payload.get("errors"):
         raise RuntimeError(f"GraphQL error: {payload['errors']}")
     return payload["data"]
@@ -50,15 +60,16 @@ def viewer_login(token: str) -> str:
     return gql(token, "query { viewer { login } }")["viewer"]["login"]
 
 
-def fetch_repos(token: str, login: str) -> list[dict]:
+def fetch_repos(token: str, login: str, uid: str) -> list[dict]:
     query = """
-    query($login: String!, $after: String) {
+    query($login: String!, $after: String, $uid: ID!) {
       user(login: $login) {
-        repositories(ownerAffiliations: OWNER, isFork: false, first: 100, after: $after) {
+        repositories(ownerAffiliations: OWNER, isFork: false, first: 20, after: $after) {
           pageInfo { hasNextPage endCursor }
           nodes {
             isPrivate
             stargazerCount
+            defaultBranchRef { target { ... on Commit { history(author: {id: $uid}) { totalCount } } } }
             languages(first: 20, orderBy: {field: SIZE, direction: DESC}) {
               edges { size node { name color } }
             }
@@ -69,12 +80,20 @@ def fetch_repos(token: str, login: str) -> list[dict]:
     repos: list[dict] = []
     after = None
     while True:
-        data = gql(token, query, {"login": login, "after": after})
+        data = gql(token, query, {"login": login, "after": after, "uid": uid})
         page = data["user"]["repositories"]
         repos.extend(page["nodes"])
         if not page["pageInfo"]["hasNextPage"]:
             return repos
         after = page["pageInfo"]["endCursor"]
+
+
+def fetch_user(token: str, login: str) -> dict:
+    return gql(
+        token,
+        "query($l: String!) { user(login: $l) { id pullRequests { totalCount } issues { totalCount } } }",
+        {"l": login},
+    )["user"]
 
 
 def fetch_contributions(token: str, login: str) -> dict:
@@ -202,7 +221,8 @@ def main() -> int:
     exclude = {s.lower() for s in excluded}
     out_dir = Path(os.environ.get("OUT_DIR", "stats"))
 
-    repos = fetch_repos(token, login)
+    user = fetch_user(token, login)
+    repos = fetch_repos(token, login, user["id"])
     contrib = fetch_contributions(token, login)
 
     lang_sizes: dict[str, int] = {}
@@ -221,6 +241,12 @@ def main() -> int:
         "public_repos": sum(1 for r in repos if not r["isPrivate"]),
         "private_repos": sum(1 for r in repos if r["isPrivate"]),
         **contrib,
+        "repo_commits": sum(
+            ((r.get("defaultBranchRef") or {}).get("target") or {}).get("history", {}).get("totalCount", 0)
+            for r in repos
+        ),
+        "user_prs": user["pullRequests"]["totalCount"],
+        "user_issues": user["issues"]["totalCount"],
     }
     updated = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
     print("totals: " + " ".join(f"{k}={v}" for k, v in stats.items()))
