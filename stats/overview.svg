@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="240" viewBox="0 0 420 240" role="img" aria-labelledby="t">
+<title id="t">mylesagnew GitHub stats</title>
+
+<style>
+  :root { --bg:#ffffff; --border:#d0d7de; --fg:#1f2328; --muted:#59636e; --accent:#0969da; --track:#eaeef2; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0d1117; --border:#30363d; --fg:#e6edf3; --muted:#9198a1; --accent:#4493f8; --track:#21262d; }
+  }
+  .bg { fill: var(--bg); stroke: var(--border); }
+  .title { font: 600 16px 'Segoe UI', Ubuntu, -apple-system, sans-serif; fill: var(--accent); }
+  .label { font: 400 13px 'Segoe UI', Ubuntu, -apple-system, sans-serif; fill: var(--muted); }
+  .value { font: 600 13px 'Segoe UI', Ubuntu, -apple-system, sans-serif; fill: var(--fg); }
+  .foot  { font: 400 10px 'Segoe UI', Ubuntu, -apple-system, sans-serif; fill: var(--muted); }
+  .track { fill: var(--track); }
+</style>
+<rect class="bg" x="0.5" y="0.5" width="419" height="239" rx="6"/>
+<text class="title" x="24" y="36">mylesagnew · GitHub stats</text>
+<text class="label" x="24" y="70">Total stars earned (public repos)</text>
+<text class="value" x="396" y="70" text-anchor="end">9</text>
+<text class="label" x="24" y="95">Commits (all time)</text>
+<text class="value" x="396" y="95" text-anchor="end">1,026</text>
+<text class="label" x="24" y="120">Pull requests</text>
+<text class="value" x="396" y="120" text-anchor="end">129</text>
+<text class="label" x="24" y="145">Issues</text>
+<text class="value" x="396" y="145" text-anchor="end">3</text>
+<text class="label" x="24" y="170">Contributions this year</text>
+<text class="value" x="396" y="170" text-anchor="end">1,007</text>
+<text class="label" x="24" y="195">Repositories (public / private)</text>
+<text class="value" x="396" y="195" text-anchor="end">14 / 55</text>
+<text class="foot" x="24" y="226">Updated 2026-10-14 · includes private work as totals only</text>
+</svg>
