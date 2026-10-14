@@ -223,6 +223,7 @@ def main() -> int:
         **contrib,
     }
     updated = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
+    print("totals: " + " ".join(f"{k}={v}" for k, v in stats.items()))
 
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "overview.svg").write_text(overview_svg(login, stats, updated) + "\n")
