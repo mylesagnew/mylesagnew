@@ -16,17 +16,17 @@
 <rect class="bg" x="0.5" y="0.5" width="419" height="225" rx="6"/>
 <text class="title" x="24" y="36">Most used languages</text>
 <rect class="track" x="24" y="52" width="372" height="8" rx="4"/>
-<rect x="24.00" y="52" width="109.18" height="8" fill="#f1e05a"/>
-<rect x="133.18" y="52" width="103.77" height="8" fill="#3572A5"/>
-<rect x="236.95" y="52" width="48.72" height="8" fill="#4F5D95"/>
-<rect x="285.67" y="52" width="44.46" height="8" fill="#3178c6"/>
-<rect x="330.13" y="52" width="22.50" height="8" fill="#89e051"/>
-<rect x="352.63" y="52" width="20.49" height="8" fill="#00ADD8"/>
+<rect x="24.00" y="52" width="109.20" height="8" fill="#f1e05a"/>
+<rect x="133.20" y="52" width="103.73" height="8" fill="#3572A5"/>
+<rect x="236.92" y="52" width="48.73" height="8" fill="#4F5D95"/>
+<rect x="285.66" y="52" width="44.47" height="8" fill="#3178c6"/>
+<rect x="330.12" y="52" width="22.50" height="8" fill="#89e051"/>
+<rect x="352.62" y="52" width="20.50" height="8" fill="#00ADD8"/>
 <rect x="373.12" y="52" width="9.90" height="8" fill="#00B4AB"/>
 <rect x="383.02" y="52" width="7.90" height="8" fill="#844FBA"/>
 <circle cx="29" cy="84" r="5" fill="#f1e05a"/>
 <text class="value" x="40" y="88">JavaScript</text>
-<text class="label" x="200" y="88" text-anchor="end">29.3%</text>
+<text class="label" x="200" y="88" text-anchor="end">29.4%</text>
 <circle cx="219" cy="84" r="5" fill="#3572A5"/>
 <text class="value" x="230" y="88">Python</text>
 <text class="label" x="390" y="88" text-anchor="end">27.9%</text>
