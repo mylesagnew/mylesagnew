@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Generate GitHub profile stats cards as static SVGs.
 
+Commit counts come from each owned repo's default-branch history (authored by
+the user), which -- unlike contributionsCollection -- includes private repos
+when the token is a fine-grained PAT with Contents: read.
+
 Standard library only: no third-party code runs with the token.
 
 Reads GITHUB_TOKEN (and optionally GITHUB_LOGIN) from the environment and
@@ -60,16 +64,19 @@ def viewer_login(token: str) -> str:
     return gql(token, "query { viewer { login } }")["viewer"]["login"]
 
 
-def fetch_repos(token: str, login: str, uid: str) -> list[dict]:
+def fetch_repos(token: str, login: str, uid: str, since: str) -> list[dict]:
     query = """
-    query($login: String!, $after: String, $uid: ID!) {
+    query($login: String!, $after: String, $uid: ID!, $since: GitTimestamp!) {
       user(login: $login) {
         repositories(ownerAffiliations: OWNER, isFork: false, first: 20, after: $after) {
           pageInfo { hasNextPage endCursor }
           nodes {
             isPrivate
             stargazerCount
-            defaultBranchRef { target { ... on Commit { history(author: {id: $uid}) { totalCount } } } }
+            defaultBranchRef { target { ... on Commit {
+              all: history(author: {id: $uid}) { totalCount }
+              year: history(author: {id: $uid}, since: $since) { totalCount }
+            } } }
             languages(first: 20, orderBy: {field: SIZE, direction: DESC}) {
               edges { size node { name color } }
             }
@@ -80,7 +87,7 @@ def fetch_repos(token: str, login: str, uid: str) -> list[dict]:
     repos: list[dict] = []
     after = None
     while True:
-        data = gql(token, query, {"login": login, "after": after, "uid": uid})
+        data = gql(token, query, {"login": login, "after": after, "uid": uid, "since": since})
         page = data["user"]["repositories"]
         repos.extend(page["nodes"])
         if not page["pageInfo"]["hasNextPage"]:
@@ -94,43 +101,6 @@ def fetch_user(token: str, login: str) -> dict:
         "query($l: String!) { user(login: $l) { id pullRequests { totalCount } issues { totalCount } } }",
         {"l": login},
     )["user"]
-
-
-def fetch_contributions(token: str, login: str) -> dict:
-    """All-time contribution totals, summed year by year since account creation."""
-    created = gql(
-        token, "query($l: String!) { user(login: $l) { createdAt } }", {"l": login}
-    )["user"]["createdAt"]
-    start_year = int(created[:4])
-    now = dt.datetime.now(dt.timezone.utc)
-    query = """
-    query($login: String!, $from: DateTime!, $to: DateTime!) {
-      user(login: $login) {
-        contributionsCollection(from: $from, to: $to) {
-          totalCommitContributions
-          restrictedContributionsCount
-          totalPullRequestContributions
-          totalIssueContributions
-          totalPullRequestReviewContributions
-          contributionCalendar { totalContributions }
-        }
-      }
-    }"""
-    totals = {"commits": 0, "private": 0, "prs": 0, "issues": 0, "reviews": 0, "year": 0}
-    for year in range(start_year, now.year + 1):
-        frm = dt.datetime(year, 1, 1, tzinfo=dt.timezone.utc)
-        to = min(dt.datetime(year, 12, 31, 23, 59, 59, tzinfo=dt.timezone.utc), now)
-        c = gql(token, query, {"login": login, "from": frm.isoformat(), "to": to.isoformat()})[
-            "user"
-        ]["contributionsCollection"]
-        totals["commits"] += c["totalCommitContributions"]
-        totals["private"] += c["restrictedContributionsCount"]
-        totals["prs"] += c["totalPullRequestContributions"]
-        totals["issues"] += c["totalIssueContributions"]
-        totals["reviews"] += c["totalPullRequestReviewContributions"]
-        if year == now.year:
-            totals["year"] = c["contributionCalendar"]["totalContributions"]
-    return totals
 
 
 STYLE = """
@@ -155,10 +125,10 @@ def fmt(n: int) -> str:
 def overview_svg(login: str, stats: dict, updated: str) -> str:
     rows = [
         ("Total stars earned (public repos)", stats["stars"]),
-        ("Commits (all time)", stats["commits"]),
+        ("Commits to my repos (all time)", stats["commits"]),
         ("Pull requests", stats["prs"]),
         ("Issues", stats["issues"]),
-        ("Contributions this year", stats["year"]),
+        ("Commits this year", stats["year"]),
         ("Repositories (public / private)", f"{stats['public_repos']} / {stats['private_repos']}"),
     ]
     h = 70 + len(rows) * 25 + 20
@@ -221,9 +191,9 @@ def main() -> int:
     exclude = {s.lower() for s in excluded}
     out_dir = Path(os.environ.get("OUT_DIR", "stats"))
 
+    now = dt.datetime.now(dt.timezone.utc)
     user = fetch_user(token, login)
-    repos = fetch_repos(token, login, user["id"])
-    contrib = fetch_contributions(token, login)
+    repos = fetch_repos(token, login, user["id"], f"{now.year}-01-01T00:00:00Z")
 
     lang_sizes: dict[str, int] = {}
     lang_colors: dict[str, str] = {}
@@ -236,19 +206,20 @@ def main() -> int:
             lang_colors[name] = edge["node"]["color"] or "#8b949e"
     langs = sorted(((n, s, lang_colors[n]) for n, s in lang_sizes.items()), key=lambda t: -t[1])
 
+    def commits(repo: dict, key: str) -> int:
+        target = (repo.get("defaultBranchRef") or {}).get("target") or {}
+        return (target.get(key) or {}).get("totalCount", 0)
+
     stats = {
         "stars": sum(r["stargazerCount"] for r in repos if not r["isPrivate"]),
+        "commits": sum(commits(r, "all") for r in repos),
+        "year": sum(commits(r, "year") for r in repos),
+        "prs": user["pullRequests"]["totalCount"],
+        "issues": user["issues"]["totalCount"],
         "public_repos": sum(1 for r in repos if not r["isPrivate"]),
         "private_repos": sum(1 for r in repos if r["isPrivate"]),
-        **contrib,
-        "repo_commits": sum(
-            ((r.get("defaultBranchRef") or {}).get("target") or {}).get("history", {}).get("totalCount", 0)
-            for r in repos
-        ),
-        "user_prs": user["pullRequests"]["totalCount"],
-        "user_issues": user["issues"]["totalCount"],
     }
-    updated = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
+    updated = now.strftime("%Y-%m-%d")
     print("totals: " + " ".join(f"{k}={v}" for k, v in stats.items()))
 
     out_dir.mkdir(parents=True, exist_ok=True)
