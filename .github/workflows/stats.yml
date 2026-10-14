@@ -1,0 +1,44 @@
+name: Profile stats
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # daily, 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit the regenerated SVGs
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: true
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      # Pinned to a commit SHA for supply-chain safety.
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+
+      # No third-party code runs with the token: the generator is a
+      # standard-library-only script in this repo.
+      - name: Generate stats cards
+        env:
+          # STATS_TOKEN: fine-grained PAT, All repositories, Metadata: read
+          # (counts private work as totals only). Falls back to the
+          # workflow token, which sees public data only.
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || github.token }}
+          GITHUB_LOGIN: mylesagnew
+          EXCLUDE_LANGUAGES: HTML,CSS,SCSS,Smarty
+        run: python3 scripts/generate_stats.py
+
+      - name: Commit if changed
+        run: |
+          git add stats/
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(stats): refresh profile stats [skip ci]"
+          git push

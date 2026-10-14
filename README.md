@@ -76,8 +76,10 @@ Open an issue on any repo, or get in touch via **[mylesagnew.com](https://www.my
 <details>
 <summary>📊 GitHub stats</summary>
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mylesagnew&show_icons=true&hide_border=true&include_all_commits=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mylesagnew&layout=compact&hide_border=true)
+<img src="stats/overview.svg" alt="GitHub stats" width="420" />
+<img src="stats/languages.svg" alt="Most used languages" width="420" />
+
+<sub>Self-generated daily by a standard-library script in this repo (<code>scripts/generate_stats.py</code>), so it includes private work as totals only.</sub>
 
 </details>
 
