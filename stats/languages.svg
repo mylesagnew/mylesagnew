@@ -16,38 +16,38 @@
 <rect class="bg" x="0.5" y="0.5" width="419" height="225" rx="6"/>
 <text class="title" x="24" y="36">Most used languages</text>
 <rect class="track" x="24" y="52" width="372" height="8" rx="4"/>
-<rect x="24.00" y="52" width="109.20" height="8" fill="#f1e05a"/>
-<rect x="133.20" y="52" width="103.73" height="8" fill="#3572A5"/>
-<rect x="236.92" y="52" width="48.73" height="8" fill="#4F5D95"/>
-<rect x="285.66" y="52" width="44.47" height="8" fill="#3178c6"/>
-<rect x="330.12" y="52" width="22.50" height="8" fill="#89e051"/>
-<rect x="352.62" y="52" width="20.50" height="8" fill="#00ADD8"/>
-<rect x="373.12" y="52" width="9.90" height="8" fill="#00B4AB"/>
-<rect x="383.02" y="52" width="7.90" height="8" fill="#844FBA"/>
-<circle cx="29" cy="84" r="5" fill="#f1e05a"/>
-<text class="value" x="40" y="88">JavaScript</text>
-<text class="label" x="200" y="88" text-anchor="end">29.4%</text>
-<circle cx="219" cy="84" r="5" fill="#3572A5"/>
-<text class="value" x="230" y="88">Python</text>
-<text class="label" x="390" y="88" text-anchor="end">27.9%</text>
+<rect x="24.00" y="52" width="110.17" height="8" fill="#3572A5"/>
+<rect x="134.17" y="52" width="106.57" height="8" fill="#f1e05a"/>
+<rect x="240.74" y="52" width="47.45" height="8" fill="#4F5D95"/>
+<rect x="288.19" y="52" width="43.30" height="8" fill="#3178c6"/>
+<rect x="331.49" y="52" width="21.97" height="8" fill="#89e051"/>
+<rect x="353.45" y="52" width="19.96" height="8" fill="#00ADD8"/>
+<rect x="373.41" y="52" width="9.64" height="8" fill="#00B4AB"/>
+<rect x="383.05" y="52" width="7.70" height="8" fill="#844FBA"/>
+<circle cx="29" cy="84" r="5" fill="#3572A5"/>
+<text class="value" x="40" y="88">Python</text>
+<text class="label" x="200" y="88" text-anchor="end">29.6%</text>
+<circle cx="219" cy="84" r="5" fill="#f1e05a"/>
+<text class="value" x="230" y="88">JavaScript</text>
+<text class="label" x="390" y="88" text-anchor="end">28.6%</text>
 <circle cx="29" cy="108" r="5" fill="#4F5D95"/>
 <text class="value" x="40" y="112">PHP</text>
-<text class="label" x="200" y="112" text-anchor="end">13.1%</text>
+<text class="label" x="200" y="112" text-anchor="end">12.8%</text>
 <circle cx="219" cy="108" r="5" fill="#3178c6"/>
 <text class="value" x="230" y="112">TypeScript</text>
-<text class="label" x="390" y="112" text-anchor="end">12.0%</text>
+<text class="label" x="390" y="112" text-anchor="end">11.6%</text>
 <circle cx="29" cy="132" r="5" fill="#89e051"/>
 <text class="value" x="40" y="136">Shell</text>
-<text class="label" x="200" y="136" text-anchor="end">6.0%</text>
+<text class="label" x="200" y="136" text-anchor="end">5.9%</text>
 <circle cx="219" cy="132" r="5" fill="#00ADD8"/>
 <text class="value" x="230" y="136">Go Template</text>
-<text class="label" x="390" y="136" text-anchor="end">5.5%</text>
+<text class="label" x="390" y="136" text-anchor="end">5.4%</text>
 <circle cx="29" cy="156" r="5" fill="#00B4AB"/>
 <text class="value" x="40" y="160">Dart</text>
-<text class="label" x="200" y="160" text-anchor="end">2.7%</text>
+<text class="label" x="200" y="160" text-anchor="end">2.6%</text>
 <circle cx="219" cy="156" r="5" fill="#844FBA"/>
 <text class="value" x="230" y="160">HCL</text>
 <text class="label" x="390" y="160" text-anchor="end">2.1%</text>
-<text class="foot" x="24" y="196">Updated 2026-10-15 · by code size across owned, non-fork repos</text>
+<text class="foot" x="24" y="196">Updated 2026-10-16 · by code size across owned, non-fork repos</text>
 <text class="foot" x="24" y="212">Excludes markup/templates: HTML, CSS, SCSS, Smarty</text>
 </svg>
