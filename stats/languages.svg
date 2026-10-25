@@ -48,6 +48,6 @@
 <circle cx="219" cy="156" r="5" fill="#844FBA"/>
 <text class="value" x="230" y="160">HCL</text>
 <text class="label" x="390" y="160" text-anchor="end">2.1%</text>
-<text class="foot" x="24" y="196">Updated 2026-10-24 · by code size across owned, non-fork repos</text>
+<text class="foot" x="24" y="196">Updated 2026-10-25 · by code size across owned, non-fork repos</text>
 <text class="foot" x="24" y="212">Excludes markup/templates: HTML, CSS, SCSS, Smarty</text>
 </svg>
