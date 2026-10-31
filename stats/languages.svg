@@ -17,8 +17,8 @@
 <text class="title" x="24" y="36">Most used languages</text>
 <rect class="track" x="24" y="52" width="372" height="8" rx="4"/>
 <rect x="24.00" y="52" width="110.67" height="8" fill="#3572A5"/>
-<rect x="134.67" y="52" width="108.07" height="8" fill="#f1e05a"/>
-<rect x="242.74" y="52" width="46.81" height="8" fill="#4F5D95"/>
+<rect x="134.67" y="52" width="108.08" height="8" fill="#f1e05a"/>
+<rect x="242.75" y="52" width="46.80" height="8" fill="#4F5D95"/>
 <rect x="289.55" y="52" width="42.71" height="8" fill="#3178c6"/>
 <rect x="332.26" y="52" width="21.67" height="8" fill="#89e051"/>
 <rect x="353.93" y="52" width="19.69" height="8" fill="#00ADD8"/>
@@ -26,7 +26,7 @@
 <rect x="383.13" y="52" width="7.69" height="8" fill="#844FBA"/>
 <circle cx="29" cy="84" r="5" fill="#3572A5"/>
 <text class="value" x="40" y="88">Python</text>
-<text class="label" x="200" y="88" text-anchor="end">29.8%</text>
+<text class="label" x="200" y="88" text-anchor="end">29.7%</text>
 <circle cx="219" cy="84" r="5" fill="#f1e05a"/>
 <text class="value" x="230" y="88">JavaScript</text>
 <text class="label" x="390" y="88" text-anchor="end">29.1%</text>
@@ -48,6 +48,6 @@
 <circle cx="219" cy="156" r="5" fill="#844FBA"/>
 <text class="value" x="230" y="160">HCL</text>
 <text class="label" x="390" y="160" text-anchor="end">2.1%</text>
-<text class="foot" x="24" y="196">Updated 2026-10-30 · by code size across owned, non-fork repos</text>
+<text class="foot" x="24" y="196">Updated 2026-10-31 · by code size across owned, non-fork repos</text>
 <text class="foot" x="24" y="212">Excludes markup/templates: HTML, CSS, SCSS, Smarty</text>
 </svg>
