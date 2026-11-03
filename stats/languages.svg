@@ -16,17 +16,17 @@
 <rect class="bg" x="0.5" y="0.5" width="419" height="225" rx="6"/>
 <text class="title" x="24" y="36">Most used languages</text>
 <rect class="track" x="24" y="52" width="372" height="8" rx="4"/>
-<rect x="24.00" y="52" width="111.81" height="8" fill="#3572A5"/>
-<rect x="135.81" y="52" width="107.56" height="8" fill="#f1e05a"/>
-<rect x="243.37" y="52" width="46.56" height="8" fill="#4F5D95"/>
-<rect x="289.94" y="52" width="42.65" height="8" fill="#3178c6"/>
-<rect x="332.59" y="52" width="21.56" height="8" fill="#89e051"/>
-<rect x="354.15" y="52" width="19.59" height="8" fill="#00ADD8"/>
-<rect x="373.73" y="52" width="9.46" height="8" fill="#00B4AB"/>
-<rect x="383.19" y="52" width="7.65" height="8" fill="#844FBA"/>
+<rect x="24.00" y="52" width="111.78" height="8" fill="#3572A5"/>
+<rect x="135.78" y="52" width="107.52" height="8" fill="#f1e05a"/>
+<rect x="243.30" y="52" width="46.55" height="8" fill="#4F5D95"/>
+<rect x="289.85" y="52" width="42.64" height="8" fill="#3178c6"/>
+<rect x="332.48" y="52" width="21.68" height="8" fill="#89e051"/>
+<rect x="354.16" y="52" width="19.58" height="8" fill="#00ADD8"/>
+<rect x="373.74" y="52" width="9.46" height="8" fill="#00B4AB"/>
+<rect x="383.20" y="52" width="7.65" height="8" fill="#844FBA"/>
 <circle cx="29" cy="84" r="5" fill="#3572A5"/>
 <text class="value" x="40" y="88">Python</text>
-<text class="label" x="200" y="88" text-anchor="end">30.1%</text>
+<text class="label" x="200" y="88" text-anchor="end">30.0%</text>
 <circle cx="219" cy="84" r="5" fill="#f1e05a"/>
 <text class="value" x="230" y="88">JavaScript</text>
 <text class="label" x="390" y="88" text-anchor="end">28.9%</text>
@@ -48,6 +48,6 @@
 <circle cx="219" cy="156" r="5" fill="#844FBA"/>
 <text class="value" x="230" y="160">HCL</text>
 <text class="label" x="390" y="160" text-anchor="end">2.1%</text>
-<text class="foot" x="24" y="196">Updated 2026-11-02 · by code size across owned, non-fork repos</text>
+<text class="foot" x="24" y="196">Updated 2026-11-03 · by code size across owned, non-fork repos</text>
 <text class="foot" x="24" y="212">Excludes markup/templates: HTML, CSS, SCSS, Smarty</text>
 </svg>
