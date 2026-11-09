@@ -16,32 +16,32 @@
 <rect class="bg" x="0.5" y="0.5" width="419" height="225" rx="6"/>
 <text class="title" x="24" y="36">Most used languages</text>
 <rect class="track" x="24" y="52" width="372" height="8" rx="4"/>
-<rect x="24.00" y="52" width="109.04" height="8" fill="#3572A5"/>
-<rect x="133.04" y="52" width="103.83" height="8" fill="#f1e05a"/>
-<rect x="236.87" y="52" width="54.56" height="8" fill="#3178c6"/>
-<rect x="291.43" y="52" width="42.17" height="8" fill="#4F5D95"/>
-<rect x="333.60" y="52" width="19.79" height="8" fill="#89e051"/>
-<rect x="353.39" y="52" width="17.74" height="8" fill="#00ADD8"/>
-<rect x="371.13" y="52" width="8.57" height="8" fill="#00B4AB"/>
-<rect x="379.69" y="52" width="7.00" height="8" fill="#844FBA"/>
+<rect x="24.00" y="52" width="107.53" height="8" fill="#3572A5"/>
+<rect x="131.53" y="52" width="102.39" height="8" fill="#f1e05a"/>
+<rect x="233.92" y="52" width="53.80" height="8" fill="#3178c6"/>
+<rect x="287.72" y="52" width="46.72" height="8" fill="#4F5D95"/>
+<rect x="334.44" y="52" width="19.54" height="8" fill="#89e051"/>
+<rect x="353.98" y="52" width="17.49" height="8" fill="#00ADD8"/>
+<rect x="371.47" y="52" width="8.45" height="8" fill="#00B4AB"/>
+<rect x="379.92" y="52" width="6.91" height="8" fill="#844FBA"/>
 <circle cx="29" cy="84" r="5" fill="#3572A5"/>
 <text class="value" x="40" y="88">Python</text>
-<text class="label" x="200" y="88" text-anchor="end">29.3%</text>
+<text class="label" x="200" y="88" text-anchor="end">28.9%</text>
 <circle cx="219" cy="84" r="5" fill="#f1e05a"/>
 <text class="value" x="230" y="88">JavaScript</text>
-<text class="label" x="390" y="88" text-anchor="end">27.9%</text>
+<text class="label" x="390" y="88" text-anchor="end">27.5%</text>
 <circle cx="29" cy="108" r="5" fill="#3178c6"/>
 <text class="value" x="40" y="112">TypeScript</text>
-<text class="label" x="200" y="112" text-anchor="end">14.7%</text>
+<text class="label" x="200" y="112" text-anchor="end">14.5%</text>
 <circle cx="219" cy="108" r="5" fill="#4F5D95"/>
 <text class="value" x="230" y="112">PHP</text>
-<text class="label" x="390" y="112" text-anchor="end">11.3%</text>
+<text class="label" x="390" y="112" text-anchor="end">12.6%</text>
 <circle cx="29" cy="132" r="5" fill="#89e051"/>
 <text class="value" x="40" y="136">Shell</text>
 <text class="label" x="200" y="136" text-anchor="end">5.3%</text>
 <circle cx="219" cy="132" r="5" fill="#00ADD8"/>
 <text class="value" x="230" y="136">Go Template</text>
-<text class="label" x="390" y="136" text-anchor="end">4.8%</text>
+<text class="label" x="390" y="136" text-anchor="end">4.7%</text>
 <circle cx="29" cy="156" r="5" fill="#00B4AB"/>
 <text class="value" x="40" y="160">Dart</text>
 <text class="label" x="200" y="160" text-anchor="end">2.3%</text>
