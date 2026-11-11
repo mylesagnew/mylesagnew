@@ -16,20 +16,20 @@
 <rect class="bg" x="0.5" y="0.5" width="419" height="225" rx="6"/>
 <text class="title" x="24" y="36">Most used languages</text>
 <rect class="track" x="24" y="52" width="372" height="8" rx="4"/>
-<rect x="24.00" y="52" width="106.14" height="8" fill="#3572A5"/>
-<rect x="130.14" y="52" width="101.07" height="8" fill="#f1e05a"/>
-<rect x="231.21" y="52" width="53.11" height="8" fill="#3178c6"/>
-<rect x="284.32" y="52" width="50.91" height="8" fill="#4F5D95"/>
-<rect x="335.23" y="52" width="19.29" height="8" fill="#89e051"/>
-<rect x="354.52" y="52" width="17.27" height="8" fill="#00ADD8"/>
-<rect x="371.79" y="52" width="8.34" height="8" fill="#00B4AB"/>
-<rect x="380.13" y="52" width="6.82" height="8" fill="#844FBA"/>
+<rect x="24.00" y="52" width="106.16" height="8" fill="#3572A5"/>
+<rect x="130.16" y="52" width="100.98" height="8" fill="#f1e05a"/>
+<rect x="231.15" y="52" width="53.06" height="8" fill="#3178c6"/>
+<rect x="284.21" y="52" width="51.07" height="8" fill="#4F5D95"/>
+<rect x="335.28" y="52" width="19.28" height="8" fill="#89e051"/>
+<rect x="354.56" y="52" width="17.25" height="8" fill="#00ADD8"/>
+<rect x="371.81" y="52" width="8.33" height="8" fill="#00B4AB"/>
+<rect x="380.14" y="52" width="6.81" height="8" fill="#844FBA"/>
 <circle cx="29" cy="84" r="5" fill="#3572A5"/>
 <text class="value" x="40" y="88">Python</text>
 <text class="label" x="200" y="88" text-anchor="end">28.5%</text>
 <circle cx="219" cy="84" r="5" fill="#f1e05a"/>
 <text class="value" x="230" y="88">JavaScript</text>
-<text class="label" x="390" y="88" text-anchor="end">27.2%</text>
+<text class="label" x="390" y="88" text-anchor="end">27.1%</text>
 <circle cx="29" cy="108" r="5" fill="#3178c6"/>
 <text class="value" x="40" y="112">TypeScript</text>
 <text class="label" x="200" y="112" text-anchor="end">14.3%</text>
@@ -48,6 +48,6 @@
 <circle cx="219" cy="156" r="5" fill="#844FBA"/>
 <text class="value" x="230" y="160">HCL</text>
 <text class="label" x="390" y="160" text-anchor="end">1.8%</text>
-<text class="foot" x="24" y="196">Updated 2026-11-10 · by code size across owned, non-fork repos</text>
+<text class="foot" x="24" y="196">Updated 2026-11-11 · by code size across owned, non-fork repos</text>
 <text class="foot" x="24" y="212">Excludes markup/templates: HTML, CSS, SCSS, Smarty</text>
 </svg>
