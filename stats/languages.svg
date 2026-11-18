@@ -16,8 +16,8 @@
 <rect class="bg" x="0.5" y="0.5" width="419" height="225" rx="6"/>
 <text class="title" x="24" y="36">Most used languages</text>
 <rect class="track" x="24" y="52" width="372" height="8" rx="4"/>
-<rect x="24.00" y="52" width="265.60" height="8" fill="#555555"/>
-<rect x="289.60" y="52" width="32.62" height="8" fill="#3572A5"/>
+<rect x="24.00" y="52" width="265.59" height="8" fill="#555555"/>
+<rect x="289.59" y="52" width="32.63" height="8" fill="#3572A5"/>
 <rect x="322.22" y="52" width="25.09" height="8" fill="#f1e05a"/>
 <rect x="347.31" y="52" width="13.51" height="8" fill="#4F5D95"/>
 <rect x="360.82" y="52" width="13.12" height="8" fill="#3178c6"/>
@@ -48,6 +48,6 @@
 <circle cx="219" cy="156" r="5" fill="#f34b7d"/>
 <text class="value" x="230" y="160">C++</text>
 <text class="label" x="390" y="160" text-anchor="end">0.6%</text>
-<text class="foot" x="24" y="196">Updated 2026-11-17 · by code size across owned, non-fork repos</text>
+<text class="foot" x="24" y="196">Updated 2026-11-18 · by code size across owned, non-fork repos</text>
 <text class="foot" x="24" y="212">Excludes markup/templates: HTML, CSS, SCSS, Smarty</text>
 </svg>
